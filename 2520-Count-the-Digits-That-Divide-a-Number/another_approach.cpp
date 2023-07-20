@@ -4,7 +4,7 @@ public:
 
         int count = 0, temp = num;
         while(temp) {
-            if(num % ( temp % 10 ) == 0) ++count;
+            if(!(num % ( temp % 10 ))) ++count;
             temp /= 10;
         }
 
