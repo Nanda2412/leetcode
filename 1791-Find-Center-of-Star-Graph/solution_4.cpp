@@ -9,13 +9,9 @@ public:
         _edge.x = edges.front().front();
         _edge.y = edges.front().back();
 
-        if(_edge.x == edges.back().front()) return _edge.x;
-        if(_edge.x == edges.back().back()) return _edge.x;
-
-        if(_edge.y == edges.back().front()) return _edge.y;
-        if(_edge.y == edges.back().back()) return _edge.y;
-
-        // never reaches here
-        return -1;
+        auto edge_x = edges.back().front();
+        auto edge_y = edges.back().back();
+        
+        return ( _edge.x == edge_x || _edge.x == edge_y ) ? _edge.x : _edge.y;
     }
 };
