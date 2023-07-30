@@ -6,20 +6,20 @@ public:
             numSet.emplace(num);
         }
 
-        int result = 0;
+        int triplets = 0;
         for(const auto& num : nums) {
-            int triplets = 1;
+            int count = 1;
             int elem = num;
             while(numSet.count(elem + diff)) {
                 elem += diff;
-                ++triplets;
-                if(triplets == 3) {
-                    ++result;
+                ++count;
+                if(count == 3) {
+                    ++triplets;
                     break;
                 }
             }
         }
 
-        return result;
+        return triplets;
     }
 };
