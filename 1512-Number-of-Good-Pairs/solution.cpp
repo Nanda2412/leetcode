@@ -9,9 +9,9 @@ public:
 
         int result = 0;
         for(const auto&[num, count] : countMap) {
-            result += (count * (count - 1)) / 2;
+            result += (count * (count - 1));
         }
 
-        return result;
+        return result/2;
     }
 };
