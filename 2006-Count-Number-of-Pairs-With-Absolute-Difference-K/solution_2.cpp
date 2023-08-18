@@ -5,11 +5,13 @@ public:
         unordered_map<int,int> countMap;
 
         const static auto& countKDiffPairs = [&](const auto& num) {
-            if(countMap.count(num - k)) {
-                result += countMap[num - k];
+            const auto& diff_1 = num - k;
+            const auto& diff_2 = num + k;
+            if(countMap.count(diff_1)) {
+                result += countMap[diff_1];
             } 
-            if(countMap.count(num + k)) {
-                result += countMap[num + k];
+            if(countMap.count(diff_2)) {
+                result += countMap[diff_2];
             }
 
              ++countMap[num];
