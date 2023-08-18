@@ -5,7 +5,7 @@ public:
         unordered_map<int,int> countMap;
 
         const static auto& countKDiffPairs = [&](const auto& num) {
-            if(countMap.count(abs(num - k))) {
+            if(countMap.count(num - k)) {
                 result += countMap[num - k];
             } 
             if(countMap.count(num + k)) {
