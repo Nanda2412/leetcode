@@ -4,11 +4,10 @@ public:
         const auto _min = *min_element(nums.begin(), nums.end());
         const auto _max = *max_element(nums.begin(), nums.end());
 
-        int result = -1;
         for(const auto& num : nums) {
-            if(num != _min && num != _max) result = num;
+            if(num != _min && num != _max) return num;
         }
 
-        return result;
+        return -1;
     }
 };
