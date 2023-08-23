@@ -7,7 +7,7 @@ public:
         for(auto& word : words) {
             if(word[0] > word[1]) swap(word[0], word[1]);
 
-            if(uniqueWords.count(word)) ++result;
+            result += uniqueWords.count(word);
             uniqueWords.emplace(word);
         }
 
