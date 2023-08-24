@@ -1,4 +1,4 @@
-lass Solution {
+class Solution {
 public:
     int longestAlternatingSubarray(vector<int>& nums, int threshold) {
         int result = 0;
