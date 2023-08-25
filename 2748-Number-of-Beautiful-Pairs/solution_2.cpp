@@ -1,0 +1,25 @@
+class Solution {
+    int GCD(int a, int b) {
+        while(b) {
+            int temp = b;
+            b = a % b;
+            a = temp;
+        }
+
+        return a;
+    }
+public:
+    int countBeautifulPairs(vector<int>& nums) {
+        int result = 0;
+
+        for(int i = 0; i < nums.size(); ++i) {
+            int num_digits = static_cast<int>(floor(log10(nums[i]))) + 1;
+            int msd = static_cast<int>(pow(10, num_digits - 1));
+            for(int j = i + 1; j < nums.size(); ++j) {
+                if(GCD(nums[i]/msd, nums[j]%10) == 1) ++result;
+            }
+        }
+
+        return result;
+    }
+};
