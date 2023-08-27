@@ -16,19 +16,10 @@ public:
 
         if(!root->left && !root->right) return root->val;
 
-        bool l_result;
-        if(root->left) {
-            l_result = evaluateTree(root->left);
-        }
+        const bool l_result = evaluateTree(root->left);
+        if((!l_result && root->val & 1) || (l_result && !(root->val & 1))) return l_result;
+        const bool r_result = evaluateTree(root->right);
 
-        if(!l_result && root->val & 1) return false;
-        if(l_result && !(root->val & 1)) return true;
-
-        bool r_result;
-        if(root->right) {
-            r_result = evaluateTree(root->right);
-        }
-
-        return root->val & 1 ? l_result && r_result : l_result || r_result;
+        return r_result;
     }
 };
