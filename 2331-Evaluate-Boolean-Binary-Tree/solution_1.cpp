@@ -16,14 +16,8 @@ public:
 
         if(!root->left && !root->right) return root->val;
 
-        bool l_result;
-        if(root->left) {
-            l_result = evaluateTree(root->left);
-        }
-        bool r_result;
-        if(root->right) {
-            r_result = evaluateTree(root->right);
-        }
+        const bool l_result = evaluateTree(root->left);
+        const bool r_result =  evaluateTree(root->right);
 
         return root->val & 1 ? l_result && r_result : l_result || r_result;
     }
