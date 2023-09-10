@@ -14,6 +14,6 @@ public:
             leftOver += count%2;
         }
 
-        return vector<int>{pairsFormed, leftOver};
+        return {pairsFormed, leftOver};
     }
 };
