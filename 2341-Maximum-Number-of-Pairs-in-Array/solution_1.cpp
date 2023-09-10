@@ -14,6 +14,6 @@ public:
             uniqueNums.emplace(num);
         }
 
-        return vector<int>{pairsFormed, static_cast<int>(uniqueNums.size())};
+        return {pairsFormed, static_cast<int>(uniqueNums.size())};
     }
 };
