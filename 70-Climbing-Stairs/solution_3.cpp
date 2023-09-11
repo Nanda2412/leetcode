@@ -1,15 +1,12 @@
 class Solution {
 public:
     int climbStairs(int n) {
-        if(n == 1) return 1;
-        if(n == 2) return 2;
-
-        int result = 0, first = 1, second = 2;
-        for(int i = 3; i <= n; ++i) {
-            result = first + second;
-            first = second, second = result;
+        int totalSteps = 0, count_1 = 0, count_2 = 1;
+        for(int i = 1; i <= n; ++i) {
+            totalSteps = count_1 + count_2;
+            count_1 = count_2, count_2 = totalSteps;
         }
 
-        return result;
+        return totalSteps;
     }
 };
