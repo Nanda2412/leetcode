@@ -11,8 +11,6 @@ public:
                 num %= msd_mask;
                 msd_mask /= 10;
             }
-
-            return result;
         };
 
         for_each(nums.begin(), nums.end(), helper);
