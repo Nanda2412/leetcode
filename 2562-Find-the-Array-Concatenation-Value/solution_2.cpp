@@ -5,8 +5,8 @@ public:
         deque<int> dq(nums.begin(), nums.end());
 
         while(!dq.empty() && dq.size() >= 2) {
-            const auto num_digits = static_cast<int>(floor(log10(dq.back()))) + 1;
-            const auto pow10 = static_cast<int>(pow(10, num_digits));
+            const auto num_digits = floor(log10(dq.back())) + 1;
+            const auto pow10 = pow(10, num_digits);
             result += dq.front() * pow10 + dq.back();
 
             dq.pop_front();
