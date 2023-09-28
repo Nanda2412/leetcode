@@ -14,8 +14,6 @@ public:
                     if(a - '0' == 2) return 4;
                     return 10;
                 }
-
-                return 0;
             }
 
             return 1;
@@ -26,7 +24,6 @@ public:
             if(a == '?' && b != '?') return 6;
             if(a != '?' && b == '?') {
                 if(a - '0' <= 5) return 10;
-                return 0;
             }
 
             return 1;
