@@ -6,7 +6,7 @@ public:
         for(auto& word : words) {
             bitset<26> bits;
             for(const auto& c : word) {
-                bits[c - '0'] = true;
+                bits.set(c - 'a');
             }
 
             ++countMap[bits.to_ulong()];
