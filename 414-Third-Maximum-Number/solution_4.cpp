@@ -1,3 +1,4 @@
+// I learned the following implementation from EPI(Elements of Programming Interviews). Chapter 12(Searching), problem #8
 class Solution {
 template<typename Compare>
 int PartitionAroundPivot(int left, int right, int pivot_idx, Compare comp, vector<int>& uniqueNums) {
