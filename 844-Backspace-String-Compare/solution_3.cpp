@@ -7,7 +7,7 @@ public:
             if(c != '#') {
                 s[s_write_idx++] = c;
             } else {
-                s_write_idx = s_write_idx > 0 ? s_write_idx - 1 : s_write_idx;
+                s_write_idx = s_write_idx > 0 ? s_write_idx - 1 : 0;
             }
         }
 
@@ -15,7 +15,7 @@ public:
             if(c != '#') {
                 t[t_write_idx++] = c;
             } else {
-                t_write_idx = t_write_idx > 0 ? t_write_idx - 1 : t_write_idx;
+                t_write_idx = t_write_idx > 0 ? t_write_idx - 1 : 0;
             }
         }
 
